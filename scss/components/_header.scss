@@ -1,15 +1,19 @@
 .header {
+  position: relative;
   background:
     linear-gradient(180deg, rgba(1, 53, 62, 1), rgba(51, 51, 51, 0.6) 31.638%, rgba(51, 51, 51, 0.22) 74.348%, rgba(51, 51, 51, 0) 99.87%),
     url(../img/header-background.webp);
   background-size: cover;
   background-position: center;
-  width: 100%;
-  height: 1080px;
+
+  &__top {
+    align-items: center;
+  }
 
   &__content {
-    width: 100%;
-    height: fit-content;
+    flex-direction: column;
+    // width: 100%;
+    // height: fit-content;
     padding-top: 33px;
     align-items: center;
     justify-content: center;
@@ -25,5 +29,90 @@
     &:not(:last-child) {
       margin-right: 45px;
     }
+  }
+
+  &__link {
+    position: relative;
+    color: var(--white-color);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0.6px;
+
+    // &::after {
+    //   position: absolute;
+    //   content: '';
+    //   bottom: -5px;
+    //   left: 0;
+    //   height: 1px;
+    //   width: 0;
+    //   background-color: red;
+    //   transition: all .3s ease-in-out;
+    // }
+
+    // &:hover::after {
+    //   width: 100%;
+    // }
+    &::after {
+      position: absolute;
+      content: '';
+      bottom: -5px;
+      left: 0;
+      height: 1px;
+      width: 100%; /* Изначально ширина 100% */
+      background-color: var(--light-green-color);
+      transform: scaleX(0); /* Начальное состояние — элемент скрыт */
+      transform-origin: right; /* Исходная точка для анимации справа */
+      transition: transform 0.3s ease-in-out; /* Плавный переход */
+    }
+    
+    &:hover::after {
+      transform: scaleX(1); /* При ховере элемент растет слева направо */
+      transform-origin: left; /* Точка появления с левой стороны */
+    }
+    
+    &:not(:hover)::after {
+      transform: scaleX(0); /* При уходе мышки элемент сжимается справа налево */
+      transform-origin: right; /* Исчезновение справа */
+    }
+  }
+
+  &__center {
+    padding-top: 236px;
+    padding-bottom: 476px;
+  }
+
+  &__title {
+    display: flex;
+    margin: 0;
+    justify-content: center;
+    color: var(--dark-green-color);
+    // font-family: Raleway;
+    font-size: 200px;
+    font-weight: 700;
+    line-height: 235px;
+    letter-spacing: 0.6px;
+  }
+
+  &__subtitle {
+    display: flex;
+    margin: 0;
+    justify-content: center;
+    color: var(--black-color);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0.6px;
+    text-align: left;
+  }
+
+  &__icon {
+    position: absolute;
+    bottom: 92px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 69px;
+    fill: var(--white-color);
   }
 }
