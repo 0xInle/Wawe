@@ -1,0 +1,185 @@
+.school {
+  padding-top: 185px;
+  padding-bottom: 185px;
+  background-color: var(--background-dark-color);
+  text-align: center;
+
+  &__title {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    margin-bottom: 100px;
+    color: var(--title-color);
+    // font-family: Raleway;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 56px;
+    letter-spacing: 0.6px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 8px;
+      height: 70px;
+      right: -8px;
+      top: 16px;
+      background-color: var(--light-green-color);
+      transform: rotate(17deg);
+    }
+  }
+
+  &__list {
+    justify-content: space-between;
+    margin-bottom: 100px;
+  }
+
+  &__item {
+    flex-direction: column;
+    text-align: left;
+    max-width: 350px;
+  }
+
+  &__subtitle {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding-left: 60px;
+    margin-bottom: 20px;
+    min-height: 56px;
+    color: var(--subtitle-color);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0.6px;
+
+    &--bg-1::before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 50px;
+      height: 50px;
+      background-image: url(../img/icon-sun.png);
+    }
+
+    &--bg-2::before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 50px;
+      height: 50px;
+      background-image: url(../img/icon-plane.png);
+
+    }
+
+    &--bg-3::before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 50px;
+      height: 50px;
+      background-image: url(../img/icon-serf.png);
+    }
+  }
+
+  &__text {
+    margin: 0;
+    color: var(--subtitle-color);
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    letter-spacing: 0.6px;
+
+    &--mb {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__advantages {
+    text-align: left;
+    justify-content: space-between;
+  }
+
+  &__wawes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__rate {
+    flex-direction: column;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__signature {
+    color: var(--subtitle-color);
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    letter-spacing: 0.6px;
+    text-align: left;
+  }
+
+  &__procent {
+    position: relative;
+    margin-bottom: 1px;
+    color: var(--subtitle-color);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.6px;
+    text-align: left;
+
+    &--pl-85 {
+      padding-left: 210px;
+
+      &::before {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 200px;
+        height: 15px;
+        background-image: url(../img/icon-wawes-1.png);
+      }
+    }
+
+    &--pl-95 {
+      padding-left: 257px;
+
+      &::before {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 247px;
+        height: 15px;
+        background-image: url(../img/icon-wawes-2.png);
+      }
+    }
+
+    &--pl-99 {
+      padding-left: 303px;
+
+      &::before {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 293px;
+        height: 15px;
+        background-image: url(../img/icon-wawes-3.png);
+      }
+    }
+  }
+
+  &__descr {
+    max-width: 600px;
+  }
+}
