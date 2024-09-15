@@ -1,2 +1,3 @@
 // import './_components.js';
-import './_project.js';
+import './_tabs.js';
+import './_showMore.js';

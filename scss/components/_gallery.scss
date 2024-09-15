@@ -37,6 +37,14 @@
     }
   }
 
+  &__link {
+    color: var(--subtitle-color);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.6px;
+  }
+
   &__btn {
     color: var(--subtitle-color);
     font-size: 24px;
@@ -51,14 +59,26 @@
     }
   }
 
-  &__image {
+  &__list-photo {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease, max-height 0.5s ease;
+    max-height: 0;
+    overflow: hidden;
+  
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 40px;
     margin-bottom: 50px;
+
+    &.active {
+      display: grid;
+      opacity: 1;
+      max-height: max-content;
+    }
   }
 
-  &__content {
+  &__item-photo {
     width: 100%;
     min-height: 280px;
     background-size: cover;
@@ -67,34 +87,165 @@
 
     &--bg-1 {
       grid-column: 1 / span 2;
-      background-image: url(../img/gallery-img-1.jpg);
+      background-image: url(../img/gallery-img-1.webp);
     }
   
     &--bg-2 {
       grid-column: 3;
-      background-image: url(../img/gallery-img-2.jpg);
+      background-image: url(../img/gallery-img-2.webp);
     }
   
     &--bg-3 {
       grid-column: 4;
-      background-image: url(../img/gallery-img-3.jpg);
+      background-image: url(../img/gallery-img-3.webp);
     }
 
     &--bg-4 {
       grid-row: 2;
-      background-image: url(../img/gallery-img-4.jpg);
+      background-image: url(../img/gallery-img-4.webp);
     }
 
     &--bg-5 {
       grid-row: 2;
       grid-column: 2;
-      background-image: url(../img/gallery-img-5.jpg);
+      background-image: url(../img/gallery-img-5.webp);
     }
 
     &--bg-6 {
       grid-row: 2;
       grid-column: 3 / span 2;
-      background-image: url(../img/gallery-img-6.jpg);
+      background-image: url(../img/gallery-img-6.webp);
+    }
+
+    &--bg-7 {
+      grid-column: 1 / span 2;
+      background-image: url(../img/gallery-img-7.webp);
+    }
+  
+    &--bg-8 {
+      grid-column: 3;
+      background-image: url(../img/gallery-img-8.webp);
+    }
+  
+    &--bg-9 {
+      grid-column: 4;
+      background-image: url(../img/gallery-img-9.webp);
+    }
+
+    &--bg-10 {
+      grid-row: 2;
+      background-image: url(../img/gallery-img-10.webp);
+    }
+
+    &--bg-11 {
+      grid-row: 2;
+      grid-column: 2;
+      background-image: url(../img/gallery-img-11.webp);
+    }
+
+    &--bg-12 {
+      grid-row: 2;
+      grid-column: 3 / span 2;
+      background-image: url(../img/gallery-img-12.webp);
+    }
+
+    &--bg-13 {
+      grid-column: 1 / span 2;
+      background-image: url(../img/gallery-img-13.webp);
+    }
+  
+    &--bg-14 {
+      grid-column: 3;
+      background-image: url(../img/gallery-img-14.webp);
+    }
+  
+    &--bg-15 {
+      grid-column: 4;
+      background-image: url(../img/gallery-img-15.webp);
+    }
+
+    &--bg-16 {
+      grid-row: 2;
+      background-image: url(../img/gallery-img-16.webp);
+    }
+
+    &--bg-17 {
+      grid-row: 2;
+      grid-column: 2;
+      background-image: url(../img/gallery-img-17.webp);
+    }
+
+    &--bg-18 {
+      grid-row: 2;
+      grid-column: 3 / span 2;
+      background-image: url(../img/gallery-img-18.webp);
+    }
+
+    &--bg-19 {
+      grid-column: 1 / span 2;
+      background-image: url(../img/gallery-img-19.webp);
+    }
+  
+    &--bg-20 {
+      grid-column: 3;
+      background-image: url(../img/gallery-img-20.webp);
+    }
+  
+    &--bg-21 {
+      grid-column: 4;
+      background-image: url(../img/gallery-img-21.webp);
+    }
+
+    &--bg-22 {
+      grid-row: 2;
+      background-image: url(../img/gallery-img-22.webp);
+    }
+
+    &--bg-23 {
+      grid-row: 2;
+      grid-column: 2;
+      background-image: url(../img/gallery-img-23.webp);
+    }
+
+    &--bg-24 {
+      grid-row: 2;
+      grid-column: 3 / span 2;
+      background-image: url(../img/gallery-img-24.webp);
+    }
+
+    &--bg-25 {
+      grid-row: 3;
+      grid-column: 1 / span 2;
+      background-image: url(../img/gallery-img-25.webp);
+    }
+  
+    &--bg-26 {
+      grid-row: 3;
+      grid-column: 3;
+      background-image: url(../img/gallery-img-26.webp);
+    }
+  
+    &--bg-27 {
+      grid-row: 3;
+      grid-column: 4;
+      background-image: url(../img/gallery-img-27.webp);
+    }
+
+    &--bg-28 {
+      grid-row: 4;
+      background-image: url(../img/gallery-img-28.webp);
+    }
+
+    &--bg-29 {
+      grid-row: 4;
+      grid-column: 2;
+      background-image: url(../img/gallery-img-29.webp);
+    }
+
+    &--bg-30 {
+      grid-row: 4;
+      grid-column: 3 / span 2;
+      background-image: url(../img/gallery-img-30.webp);
     }
   }
 }
