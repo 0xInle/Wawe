@@ -8,7 +8,13 @@ document.addEventListener("DOMContentLoaded", () => {
     // Показываем следующие 3 скрытые картинки
     for (let i = currentIndex; i < currentIndex + itemsToShow; i++) {
       if (hiddenItems[i]) {
-        hiddenItems[i].classList.remove('hidden-img');
+        // hiddenItems[i].classList.remove('hidden-img');
+        hiddenItems[i].style.display = 'block';
+
+        // Небольшая задержка для запуска анимации плавного появления
+        setTimeout(() => {
+          hiddenItems[i].classList.add('visible');
+        }, 10);
       }
     }
     currentIndex += itemsToShow;

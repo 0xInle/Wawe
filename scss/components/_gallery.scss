@@ -46,6 +46,7 @@
   }
 
   &__btn {
+    margin-top: 50px;
     color: var(--subtitle-color);
     font-size: 24px;
     font-weight: 400;
@@ -60,7 +61,6 @@
   }
 
   &__list-photo {
-    display: none;
     opacity: 0;
     transition: opacity 0.5s ease, max-height 0.5s ease;
     max-height: 0;
@@ -69,10 +69,8 @@
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 40px;
-    margin-bottom: 50px;
 
     &.active {
-      display: grid;
       opacity: 1;
       max-height: max-content;
     }
@@ -84,168 +82,180 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    transition: opacity 0.5s ease;
 
     &--bg-1 {
       grid-column: 1 / span 2;
-      background-image: url(../img/gallery-img-1.webp);
+      background-image: url(../img/gallery-img-1.jpg);
     }
   
     &--bg-2 {
       grid-column: 3;
-      background-image: url(../img/gallery-img-2.webp);
+      background-image: url(../img/gallery-img-2.jpg);
     }
   
     &--bg-3 {
       grid-column: 4;
-      background-image: url(../img/gallery-img-3.webp);
+      background-image: url(../img/gallery-img-3.jpg);
     }
 
     &--bg-4 {
       grid-row: 2;
-      background-image: url(../img/gallery-img-4.webp);
+      background-image: url(../img/gallery-img-4.jpg);
     }
 
     &--bg-5 {
       grid-row: 2;
       grid-column: 2;
-      background-image: url(../img/gallery-img-5.webp);
+      background-image: url(../img/gallery-img-5.jpg);
     }
 
     &--bg-6 {
       grid-row: 2;
       grid-column: 3 / span 2;
-      background-image: url(../img/gallery-img-6.webp);
+      background-image: url(../img/gallery-img-6.jpg);
     }
 
     &--bg-7 {
       grid-column: 1 / span 2;
-      background-image: url(../img/gallery-img-7.webp);
+      background-image: url(../img/gallery-img-7.jpg);
     }
   
     &--bg-8 {
       grid-column: 3;
-      background-image: url(../img/gallery-img-8.webp);
+      background-image: url(../img/gallery-img-8.jpg);
     }
   
     &--bg-9 {
       grid-column: 4;
-      background-image: url(../img/gallery-img-9.webp);
+      background-image: url(../img/gallery-img-9.jpg);
     }
 
     &--bg-10 {
       grid-row: 2;
-      background-image: url(../img/gallery-img-10.webp);
+      background-image: url(../img/gallery-img-10.jpg);
     }
 
     &--bg-11 {
       grid-row: 2;
       grid-column: 2;
-      background-image: url(../img/gallery-img-11.webp);
+      background-image: url(../img/gallery-img-11.jpg);
     }
 
     &--bg-12 {
       grid-row: 2;
       grid-column: 3 / span 2;
-      background-image: url(../img/gallery-img-12.webp);
+      background-image: url(../img/gallery-img-12.jpg);
     }
 
     &--bg-13 {
       grid-column: 1 / span 2;
-      background-image: url(../img/gallery-img-13.webp);
+      background-image: url(../img/gallery-img-13.jpg);
     }
   
     &--bg-14 {
       grid-column: 3;
-      background-image: url(../img/gallery-img-14.webp);
+      background-image: url(../img/gallery-img-14.jpg);
     }
   
     &--bg-15 {
       grid-column: 4;
-      background-image: url(../img/gallery-img-15.webp);
+      background-image: url(../img/gallery-img-15.jpg);
     }
 
     &--bg-16 {
       grid-row: 2;
-      background-image: url(../img/gallery-img-16.webp);
+      background-image: url(../img/gallery-img-16.jpg);
     }
 
     &--bg-17 {
       grid-row: 2;
       grid-column: 2;
-      background-image: url(../img/gallery-img-17.webp);
+      background-image: url(../img/gallery-img-17.jpg);
     }
 
     &--bg-18 {
       grid-row: 2;
       grid-column: 3 / span 2;
-      background-image: url(../img/gallery-img-18.webp);
+      background-image: url(../img/gallery-img-18.jpg);
     }
 
     &--bg-19 {
       grid-column: 1 / span 2;
-      background-image: url(../img/gallery-img-19.webp);
+      background-image: url(../img/gallery-img-19.jpg);
     }
   
     &--bg-20 {
       grid-column: 3;
-      background-image: url(../img/gallery-img-20.webp);
+      background-image: url(../img/gallery-img-20.jpg);
     }
   
     &--bg-21 {
       grid-column: 4;
-      background-image: url(../img/gallery-img-21.webp);
+      background-image: url(../img/gallery-img-21.jpg);
     }
 
     &--bg-22 {
       grid-row: 2;
-      background-image: url(../img/gallery-img-22.webp);
+      background-image: url(../img/gallery-img-22.jpg);
     }
 
     &--bg-23 {
       grid-row: 2;
       grid-column: 2;
-      background-image: url(../img/gallery-img-23.webp);
+      background-image: url(../img/gallery-img-23.jpg);
     }
 
     &--bg-24 {
       grid-row: 2;
       grid-column: 3 / span 2;
-      background-image: url(../img/gallery-img-24.webp);
+      background-image: url(../img/gallery-img-24.jpg);
     }
 
     &--bg-25 {
+      opacity: 0;
       grid-row: 3;
       grid-column: 1 / span 2;
-      background-image: url(../img/gallery-img-25.webp);
+      background-image: url(../img/gallery-img-25.jpg);
     }
   
     &--bg-26 {
+      opacity: 0;
       grid-row: 3;
       grid-column: 3;
-      background-image: url(../img/gallery-img-26.webp);
+      background-image: url(../img/gallery-img-26.jpg);
     }
   
     &--bg-27 {
+      opacity: 0;
       grid-row: 3;
       grid-column: 4;
-      background-image: url(../img/gallery-img-27.webp);
+      background-image: url(../img/gallery-img-27.jpg);
     }
 
     &--bg-28 {
+      opacity: 0;
       grid-row: 4;
-      background-image: url(../img/gallery-img-28.webp);
+      background-image: url(../img/gallery-img-28.jpg);
     }
 
     &--bg-29 {
+      opacity: 0;
       grid-row: 4;
       grid-column: 2;
-      background-image: url(../img/gallery-img-29.webp);
+      background-image: url(../img/gallery-img-29.jpg);
     }
 
     &--bg-30 {
+      opacity: 0;
       grid-row: 4;
       grid-column: 3 / span 2;
-      background-image: url(../img/gallery-img-30.webp);
+      background-image: url(../img/gallery-img-30.jpg);
+    }
+
+    &.visible {
+      opacity: 1;
+      min-height: 280px;
     }
   }
 }
