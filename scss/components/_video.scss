@@ -1,0 +1,41 @@
+.video {
+  flex-direction: column;
+  padding: 200px 0;
+
+  &__player {
+    margin-bottom: 200px;
+  }
+
+  &__list {
+    justify-content: center;
+  }
+
+  &__item {
+    margin-right: 100px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__title {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--title-color);
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 75px;
+    letter-spacing: 0.6px;
+    text-align: center;
+  }
+
+  &__subtitle {
+    display: block;
+    color: var(--subtitle-color);
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    letter-spacing: 0.6px;
+    text-align: center;
+  }
+}
