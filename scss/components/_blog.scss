@@ -1,0 +1,108 @@
+.blog {
+  text-align: center;
+
+  &__title {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    margin-bottom: 200px;
+    color: var(--title-color);
+    // font-family: Raleway;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 56px;
+    letter-spacing: 0.6px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 8px;
+      height: 70px;
+      right: -8px;
+      top: 16px;
+      background-color: var(--light-green-color);
+      transform: rotate(17deg);
+    }
+  }
+
+  &__slider {
+    position: relative;
+    width: 100%;
+    margin-bottom: 200px;
+    overflow: hidden;
+  }
+
+  &__slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%; /* Ширина для 8 слайдов */
+  }
+
+  &__slide {
+    min-width: 100%; /* Каждый слайд занимает 100% ширины */
+    height: 675px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    &--bg-1 {
+      background-image: url(../img/gallery-img-1.jpg);
+    }
+
+    &--bg-2 {
+      background-image: url(../img/gallery-img-10.jpg);
+    }
+
+    &--bg-3 {
+      background-image: url(../img/gallery-img-11.jpg);
+    }
+
+    &--bg-4 {
+      background-image: url(../img/gallery-img-16.jpg);
+    }
+
+    &--bg-5 {
+      background-image: url(../img/gallery-img-17.jpg);
+    }
+
+    &--bg-6 {
+      background-image: url(../img/gallery-img-20.jpg);
+    }
+
+    &--bg-7 {
+      background-image: url(../img/gallery-img-23.jpg);
+    }
+
+    &--bg-8 {
+      background-image: url(../img/gallery-img-27.jpg);
+    }
+  }
+
+  &__dots {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    margin-bottom: 75px;
+  }
+
+  &__dot {
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: var(--white-color);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  &__dot.active {
+    background-color: var(--light-green-color);
+  }
+}
