@@ -1,0 +1,61 @@
+.team {
+  text-align: center;
+  padding-bottom: 175px;
+
+  &__title {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    margin-bottom: 200px;
+    color: var(--title-color);
+    // font-family: Raleway;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 56px;
+    letter-spacing: 0.6px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 8px;
+      height: 70px;
+      right: -8px;
+      top: 16px;
+      background-color: var(--light-green-color);
+      transform: rotate(17deg);
+    }
+  }
+
+  &__list {
+    justify-content: space-between;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+  }
+
+  &__image {
+    max-width: 330px;
+    max-height: 450px;
+    margin-bottom: 25px;
+  }
+
+  &__name {
+    margin-bottom: 5px;
+    color: var(--subtitle-color);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0.6px;
+  }
+
+  &__profession {
+    color: var(--subtitle-color);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.6px;
+  }
+}
