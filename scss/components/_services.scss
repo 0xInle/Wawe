@@ -71,6 +71,9 @@
   }
 
   &__price-rate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: var(--title-color);
     font-size: 36px;
     font-weight: 400;
@@ -78,6 +81,7 @@
     letter-spacing: 0px;
 
     &--usd {
+      padding-left: 5px;
       color: var(--title-color);
       font-size: 18px;
       font-weight: 400;
