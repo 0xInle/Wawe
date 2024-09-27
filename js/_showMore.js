@@ -1,27 +1,28 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const showMoreButton = document.querySelector('.gallery__btn-more'); // Кнопка "Показать еще"
-  const hiddenItems = document.querySelectorAll('.gallery__item-photo.hidden-img'); // Скрытые элементы
-  let itemsToShow = 3; // Количество изображений, которые будем показывать за один раз
-  let currentIndex = 0; // Индекс для отслеживания текущей позиции
+  const listPhoto = document.querySelector('.gallery__list-photo--1');
+  const btn = document.querySelector('.gallery__btn');
+  const itemPhoto = listPhoto.querySelectorAll('.gallery__item-photo');
+  const itemPerClick = 3;
+  let visibleItem = 6;
 
-  showMoreButton.addEventListener('click', () => {
-    // Показываем следующие 3 скрытые картинки
-    for (let i = currentIndex; i < currentIndex + itemsToShow; i++) {
-      if (hiddenItems[i]) {
-        // hiddenItems[i].classList.remove('hidden-img');
-        hiddenItems[i].style.display = 'block';
+  for (let i = 0; i < 6 && i < itemPhoto.length; i++) {
+    itemPhoto[i].style.display = 'block';
+  }
 
-        // Небольшая задержка для запуска анимации плавного появления
-        setTimeout(() => {
-          hiddenItems[i].classList.add('visible');
-        }, 10);
-      }
+  if (itemPhoto.length > 6) {
+    btn.style.display = 'inline-block';
+  }
+
+  function showMoreItems() {
+    for (let i = visibleItem; i < visibleItem + itemPerClick && i < itemPhoto.length; i++) {
+      itemPhoto[i].style.display = 'block';
     }
-    currentIndex += itemsToShow;
+    visibleItem += itemPerClick;
 
-    // Если больше скрытых элементов нет, скрываем кнопку
-    if (currentIndex >= hiddenItems.length) {
-      showMoreButton.style.display = 'none';
+    if (visibleItem >= itemPhoto.length) {
+      btn.style.display = 'none';
     }
-  });
+  }
+
+  btn.addEventListener("click", showMoreItems);
 });
