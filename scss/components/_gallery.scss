@@ -38,11 +38,47 @@
   }
 
   &__link {
+    position: relative;
     color: var(--subtitle-color);
     font-size: 24px;
     font-weight: 400;
     line-height: 18px;
     letter-spacing: 0.6px;
+    transition: color .3s ease-in-out;
+    outline: none;
+
+    &::after {
+      position: absolute;
+      content: '';
+      bottom: -5px;
+      left: 0;
+      height: 2px;
+      width: 100%;
+      background-color: var(--light-green-color);
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform .3s ease-in-out;
+    }
+
+    &:focus {
+      color: var(--light-green-color);
+    }
+
+    @include hover {
+      &::after {
+        transform: scaleX(1);
+        transform-origin: left;
+      }
+
+      &:not(:hover)::after {
+        transform: scaleX(0); /* При уходе мышки элемент сжимается справа налево */
+        transform-origin: right; /* Исчезновение справа */
+      }
+    }
+
+    &:active {
+      color: var(--subtitle-color);
+    }
   }
 
   &__btn {
@@ -53,11 +89,27 @@
     font-weight: 400;
     line-height: 18px;
     letter-spacing: 0.6px;
+    transition: all .3s ease-in-out;
 
     &-more {
       min-width: 350px;
       padding: 25px;
       border: 1px solid rgb(196, 196, 196);;
+    }
+
+    &:focus {
+      background-color: var(--light-green-color);
+      color: var(--white-color);
+    }
+
+    @include hover {
+      background-color: var(--light-green-color);
+      color: var(--white-color);
+    }
+
+    &:active {
+      background-color: transparent;
+      color: var(--subtitle-color);
     }
   }
 
@@ -84,7 +136,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease-in-out;
 
     &--bg-1 {
       grid-column: 1 / span 2;
@@ -215,49 +267,48 @@
     }
 
     &--bg-25 {
-      // opacity: 0;
+      opacity: 0;
       grid-row: 3;
       grid-column: 1 / span 2;
       background-image: url(../img/gallery-img-25.jpg);
     }
   
     &--bg-26 {
-      // opacity: 0;
+      opacity: 0;
       grid-row: 3;
       grid-column: 3;
       background-image: url(../img/gallery-img-26.jpg);
     }
   
     &--bg-27 {
-      // opacity: 0;
+      opacity: 0;
       grid-row: 3;
       grid-column: 4;
       background-image: url(../img/gallery-img-27.jpg);
     }
 
     &--bg-28 {
-      // opacity: 0;
+      opacity: 0;
       grid-row: 4;
       background-image: url(../img/gallery-img-28.jpg);
     }
 
     &--bg-29 {
-      // opacity: 0;
+      opacity: 0;
       grid-row: 4;
       grid-column: 2;
       background-image: url(../img/gallery-img-29.jpg);
     }
 
     &--bg-30 {
-      // opacity: 0;
+      opacity: 0;
       grid-row: 4;
       grid-column: 3 / span 2;
       background-image: url(../img/gallery-img-30.jpg);
     }
 
-    &.visible {
+    &.show {
       opacity: 1;
-      min-height: 280px;
     }
   }
 }

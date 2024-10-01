@@ -38,42 +38,50 @@
     font-weight: 400;
     line-height: 28px;
     letter-spacing: 0.6px;
+    transition: color .3s ease-in-out;
+    outline: none;
 
-    // &::after {
-    //   position: absolute;
-    //   content: '';
-    //   bottom: -5px;
-    //   left: 0;
-    //   height: 1px;
-    //   width: 0;
-    //   background-color: red;
-    //   transition: all .3s ease-in-out;
-    // }
-
-    // &:hover::after {
-    //   width: 100%;
-    // }
     &::after {
       position: absolute;
       content: '';
       bottom: -5px;
       left: 0;
-      height: 1px;
-      width: 100%; /* Изначально ширина 100% */
+      height: 2px;
+      width: 100%;
       background-color: var(--light-green-color);
-      transform: scaleX(0); /* Начальное состояние — элемент скрыт */
-      transform-origin: right; /* Исходная точка для анимации справа */
-      transition: transform 0.3s ease-in-out; /* Плавный переход */
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform .3s ease-in-out;
     }
     
-    &:hover::after {
-      transform: scaleX(1); /* При ховере элемент растет слева направо */
-      transform-origin: left; /* Точка появления с левой стороны */
-    }
+    // &:hover::after {
+    //   transform: scaleX(1);
+    //   transform-origin: left;
+    // }
     
-    &:not(:hover)::after {
-      transform: scaleX(0); /* При уходе мышки элемент сжимается справа налево */
-      transform-origin: right; /* Исчезновение справа */
+    // &:not(:hover)::after {
+    //   transform: scaleX(0); /* При уходе мышки элемент сжимается справа налево */
+    //   transform-origin: right; /* Исчезновение справа */
+    // }
+
+    &:focus {
+      color: var(--light-green-color);
+    }
+
+    @include hover {
+      &::after {
+        transform: scaleX(1);
+        transform-origin: left;
+      }
+
+      &:not(:hover)::after {
+        transform: scaleX(0); /* При уходе мышки элемент сжимается справа налево */
+        transform-origin: right; /* Исчезновение справа */
+      }
+    }
+
+    &:active {
+      color: var(--white-color);
     }
   }
 
