@@ -12,8 +12,6 @@
 
   &__content {
     flex-direction: column;
-    // width: 100%;
-    // height: fit-content;
     padding-top: 33px;
     align-items: center;
     justify-content: center;
@@ -23,6 +21,10 @@
     width: 60px;
     height: 63px;
     margin-right: 185px;
+  }
+
+  &__list {
+    flex-wrap: wrap;
   }
 
   &__item {
@@ -53,16 +55,6 @@
       transform-origin: right;
       transition: transform .3s ease-in-out;
     }
-    
-    // &:hover::after {
-    //   transform: scaleX(1);
-    //   transform-origin: left;
-    // }
-    
-    // &:not(:hover)::after {
-    //   transform: scaleX(0); /* При уходе мышки элемент сжимается справа налево */
-    //   transform-origin: right; /* Исчезновение справа */
-    // }
 
     &:focus {
       color: var(--light-green-color);

@@ -29,11 +29,14 @@
 
   &__list {
     justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 30px;
   }
 
   &__item {
     flex-direction: column;
-    max-width: 385px;
+    width: 32%;
+    // max-width: 385px;
     min-height: 580px;
     padding: 45px 30px;
     background-color: var(--white-color);
@@ -51,6 +54,7 @@
 
   &__list-rate {
     flex-grow: 1;
+    margin-bottom: 30px;
   }
 
   &__item-rate {
