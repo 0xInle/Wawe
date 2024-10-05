@@ -9,7 +9,7 @@
     margin: 0;
     margin-bottom: 200px;
     color: var(--title-color);
-    // font-family: Raleway;
+    font-family: var(--second-family);
     font-size: 48px;
     font-weight: 600;
     line-height: 56px;
@@ -36,7 +36,6 @@
   &__item {
     flex-direction: column;
     width: 32%;
-    // max-width: 385px;
     min-height: 580px;
     padding: 45px 30px;
     background-color: var(--white-color);
