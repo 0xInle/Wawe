@@ -1,14 +1,16 @@
 .peaks {
   &__content {
-    width: 50%;
+    width: 55%;
+    padding-left: calc((100% - 1260px) / 2);
     padding-top: 200px;
     padding-bottom: 200px;
-    max-width: 530px;
+    max-width: calc(100% + 610px);
     margin-right: 80px;
   }
 
   &__title {
     position: relative;
+    min-width: 530px;
     margin: 0;
     margin-bottom: 100px;
     color: var(--title-color);
@@ -44,7 +46,7 @@
   }
 
   &__image {
-    width: 50%;
+    width: calc(100% - 530px - 80px);
     min-height: 100%;
     background-image: url(../img/peaks-img.jpg);
     background-size: cover;
